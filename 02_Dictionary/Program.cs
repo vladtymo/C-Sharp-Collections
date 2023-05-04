@@ -10,7 +10,7 @@ namespace _02_Dictionary
 
             Dictionary<string, string> countries = new Dictionary<string, string>();
 
-            countries.Add("RU", "Russia");
+            countries.Add("UA", "Ukraine");
             countries.Add("GB", "Great Britain");
             countries.Add("USA", "United States");
             countries.Add("FR", "France");
@@ -136,19 +136,17 @@ namespace _02_Dictionary
     class Identity
     {
         public long SerialNumber { get; set; }
-        public string Authority { get; set; }
+        public string? Authority { get; set; }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
-            Console.WriteLine("Equals()");
             return obj is Identity identity &&
                    SerialNumber == identity.SerialNumber;
         }
 
         public override int GetHashCode()
         {
-            Console.WriteLine("Get HashCode()");
-            return 425928964 + SerialNumber.GetHashCode();
+            return HashCode.Combine(SerialNumber);
         }
 
         public override string ToString()

@@ -32,11 +32,14 @@ namespace _01_List
             numbers.Insert(0, 666); // вставляем на первое место в списке число 666
             numbers.RemoveAt(1); //  удаляем второй элемент
 
+            numbers[3] = 555;
+            Console.WriteLine("Element[3]: " + numbers[3]);
+
             foreach (int i in numbers)
             {
                 Console.Write(i + " ");
             }
-            Console.WriteLine("Index of 7: " + numbers.IndexOf(7));
+            Console.WriteLine("\nIndex of 7: " + numbers.IndexOf(7));
 
             Console.ReadKey();
 
@@ -47,6 +50,7 @@ namespace _01_List
             people.Add(person);
             people.Add(new Person() { Name = "Antony" });
             people.Add(new Person() { Name = "Julia" });
+
             people.Sort();
 
             foreach (Person p in people)
