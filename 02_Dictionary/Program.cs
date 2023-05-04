@@ -96,9 +96,9 @@ namespace _02_Dictionary
             /////////init
             Dictionary<string, string> countries2 = new Dictionary<string, string>
             {
-                {"Франция", "Париж"},
-                {"Германия", "Берлин"},
-                {"Великобритания", "Лондон"}
+                {"Франція", "Париж"},
+                {"Германия", "Берлін"},
+                {"Великобританія", "Лондон"}
             };
 
             foreach (var pair in countries2)
@@ -107,9 +107,9 @@ namespace _02_Dictionary
             ////// C# 6.0
             Dictionary<string, string> countries3 = new Dictionary<string, string>
             {
-                ["Франция"] = "Париж",
-                ["Германия"] = "Берлин",
-                ["Великобритания"] = "Лондон"
+                ["Франція"] = "Париж",
+                ["Германія"] = "Берлін",
+                ["Великобританія"] = "Лондон"
             };
 
             foreach (var pair in countries3)

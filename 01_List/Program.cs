@@ -7,30 +7,30 @@ namespace _01_List
     {
         static void Main(string[] args)
         {
-            //void Add(T item): добавление нового элемента в список
+            //void Add(T item): додавання нового елемента до списку
             //
-            //void AddRange(ICollection collection): добавление с список коллекции или массива
+            //void AddRange(ICollection collection): додавання до списку колекції або масиву
             //
-            //int BinarySearch(T item): бинарный поиск элемента в списке.Если элемент найден, то метод возвращает индекс этого элемента в коллекции. При этом список должен быть отсортирован.
+            //int BinarySearch(T item): бінарний пошук елемента у списку.Якщо елемент знайдено, то метод повертає індекс цього елемента в колекції. При цьому список має бути відсортований.
             //
-            //int IndexOf(T item): возвращает индекс первого вхождения элемента в списке
+            //int IndexOf(T item): повертає індекс першого входження елемента у списку
             //
-            //void Insert(int index, T item): вставляет элемент item в списке на позицию index
+            //void Insert(int index, T item): вставляє елемент item у списку на позицію index
             //
-            //bool Remove(T item): удаляет элемент item из списка, и если удаление прошло успешно, то возвращает true
+            //bool Remove(T item): видаляє елемент item зі списку і якщо видалення пройшло успішно, то повертає true
             //
-            //void RemoveAt(int index): удаление элемента по указанному индексу index
+            //void RemoveAt(int index): видалення елемента за вказаним індексом index
             //
-            //void Sort(): сортировка списка
+            //void Sort(): сортування списку
 
             Console.OutputEncoding = Encoding.UTF8;
 
             List<int> numbers = new List<int>() { 1, 2, 3, 45 };
 
-            numbers.Add(6); // добавление элемента
+            numbers.Add(6);         // add item to the end
             numbers.AddRange(new int[] { 7, 8, 9 });
-            numbers.Insert(0, 666); // вставляем на первое место в списке число 666
-            numbers.RemoveAt(1); //  удаляем второй элемент
+            numbers.Insert(0, 666); // insert value {666} to index [0]
+            numbers.RemoveAt(1);    // remove item from idenx [1]
 
             numbers[3] = 555;
             Console.WriteLine("Element[3]: " + numbers[3]);
