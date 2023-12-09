@@ -8,6 +8,7 @@ namespace _02_Dictionary
         {
             Console.OutputEncoding = Encoding.UTF8;
 
+            // Dictionary: associative collection (Key + Value)
             Dictionary<string, string> countries = new Dictionary<string, string>();
 
             countries.Add("UA", "Ukraine");
@@ -70,10 +71,8 @@ namespace _02_Dictionary
             {
                 Console.WriteLine("Collection does not contain such key");
             }
-            foreach (var keyValue in people)
-            {
-                Console.WriteLine(keyValue.Key + " - " + keyValue.Value.Name);
-            }
+
+            foreach (var keyValue in people) Console.WriteLine(keyValue.Key + " - " + keyValue.Value.Name);
             Console.WriteLine("changed value END");
 
             // get all keys
@@ -118,13 +117,13 @@ namespace _02_Dictionary
             ///////////// with custom key
             Dictionary<Identity, string> staff = new Dictionary<Identity, string>();
 
-            staff.Add(new Identity() { SerialNumber = 123, Authority = "6677" }, "Vova");
+            staff.Add(new Identity() { SerialNumber = 123, Authority = "UA" }, "Vova");
 
-            if (staff.ContainsKey(new Identity() { SerialNumber = 123, Authority = "6677" }))
+            if (staff.ContainsKey(new Identity() { SerialNumber = 123, Authority = "UL" }))
                 Console.WriteLine("Exists!");
             else Console.WriteLine("Not exists!");
 
-            staff[new Identity() { SerialNumber = 444 }] = "Vika";
+            staff[new Identity() { SerialNumber = 444, Authority = "US" }] = "Vika";
 
             foreach (var item in staff)
             {

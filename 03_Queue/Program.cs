@@ -29,7 +29,7 @@ namespace _03_Queue
             Person pp = persons.Peek();
             Console.WriteLine(pp.Name);
 
-            Console.WriteLine("Сейчас в очереди {0} человек", persons.Count);
+            Console.WriteLine("There are 3 items in the queue", persons.Count);
 
             // queue: Tom, Bill, John
             foreach (Person p in persons)
@@ -41,6 +41,12 @@ namespace _03_Queue
             Person person = persons.Dequeue(); // queue: Bill, John
             Console.WriteLine(person.Name);
 
+            Console.WriteLine("Get all others items:");
+            while (persons.Count > 0)
+            {
+                Console.WriteLine(persons.Dequeue());
+            }
+
             Console.ReadLine();
         }
     }
@@ -48,5 +54,7 @@ namespace _03_Queue
     class Person
     {
         public string Name { get; set; }
+
+        public override string ToString() => Name;
     }
 }

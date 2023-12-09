@@ -25,8 +25,11 @@ namespace _01_List
 
             Console.OutputEncoding = Encoding.UTF8;
 
-            List<int> numbers = new List<int>() { 1, 2, 3, 45 };
+            // generic collections store specific data type
+            // introduced in C# 2.0
 
+            List<int> numbers = new List<int>() { 1, 2, 3, 45 };
+            
             numbers.Add(6);         // add item to the end
             numbers.AddRange(new int[] { 7, 8, 9 });
             numbers.Insert(0, 666); // insert value {666} to index [0]
@@ -39,19 +42,20 @@ namespace _01_List
             {
                 Console.Write(i + " ");
             }
-            Console.WriteLine("\nIndex of 7: " + numbers.IndexOf(7));
+            Console.WriteLine("\nIndex of 7: " + numbers.IndexOf(7)); // if not found: -1
 
             Console.ReadKey();
 
             //numbers.Exists((x) => x % 2 == 0);
 
             List<Person> people = new List<Person>(3);
+
             Person person = new Person() { Name = "Billy" };
             people.Add(person);
             people.Add(new Person() { Name = "Antony" });
             people.Add(new Person() { Name = "Julia" });
 
-            people.Sort();
+            people.Sort(); // by name
 
             foreach (Person p in people)
             {

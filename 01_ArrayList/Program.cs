@@ -6,6 +6,9 @@ namespace _01_ArrayList
     {
         static void Main()
         {
+            // non-generic collections can store any data types
+            // introduced in C# 1.0
+
             var list = new ArrayList();
 
             // add a single element
@@ -14,6 +17,8 @@ namespace _01_ArrayList
             list.Add("hi");
             list.Add(50);
             list.Add(new object());
+
+            int num = (int)list[2];
 
             // add a collection of the elements
             var anArray = new[] { "more", "or", "less" };
