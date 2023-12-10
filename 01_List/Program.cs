@@ -29,11 +29,15 @@ namespace _01_List
             // introduced in C# 2.0
 
             List<int> numbers = new List<int>() { 1, 2, 3, 45 };
-            
+
+            Console.WriteLine(numbers.Count + " - " + numbers.Capacity);
+
             numbers.Add(6);         // add item to the end
             numbers.AddRange(new int[] { 7, 8, 9 });
             numbers.Insert(0, 666); // insert value {666} to index [0]
             numbers.RemoveAt(1);    // remove item from idenx [1]
+
+            Console.WriteLine(numbers.Count + " - " + numbers.Capacity);
 
             numbers[3] = 555;
             Console.WriteLine("Element[3]: " + numbers[3]);
