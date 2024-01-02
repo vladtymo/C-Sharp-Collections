@@ -23,7 +23,7 @@ namespace _00_boxing_unboxing
             object obj = (object)number;// stack -> heap (boxing)
 
             // unboxing
-            number = (int)obj;          // heap  -> stack (unboxing)
+            number = (int)obj;          // heap -> stack (unboxing)
 
             // nullable
             int? nullableInt = 55;      // heap

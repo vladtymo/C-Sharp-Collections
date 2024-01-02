@@ -84,7 +84,6 @@ namespace compare_speed
                     int x = list[n];
                 }
                 list = null; // для гаратнованого виконання збірки сміття
-
             }
         }
         static void Main(string[] args)
