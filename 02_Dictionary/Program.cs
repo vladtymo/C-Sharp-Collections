@@ -115,15 +115,15 @@ namespace _02_Dictionary
                 Console.WriteLine("{0} - {1}", pair.Key, pair.Value);
 
             ///////////// with custom key
-            Dictionary<Identity, string> staff = new Dictionary<Identity, string>();
+            Dictionary<IdCard, string> staff = new Dictionary<IdCard, string>();
 
-            staff.Add(new Identity() { SerialNumber = 123, Authority = "UA" }, "Vova");
+            staff.Add(new IdCard() { SerialNumber = 123, Authority = "UA" }, "Vova");
 
-            if (staff.ContainsKey(new Identity() { SerialNumber = 123, Authority = "UL" }))
+            if (staff.ContainsKey(new IdCard() { SerialNumber = 123, Authority = "UL" }))
                 Console.WriteLine("Exists!");
             else Console.WriteLine("Not exists!");
 
-            staff[new Identity() { SerialNumber = 444, Authority = "US" }] = "Vika";
+            staff[new IdCard() { SerialNumber = 123, Authority = "US" }] = "Vika";
 
             foreach (var item in staff)
             {
@@ -132,14 +132,15 @@ namespace _02_Dictionary
         }
     }
 
-    class Identity
+    class IdCard
     {
         public long SerialNumber { get; set; }
         public string? Authority { get; set; }
 
+        // ! override Equals and HashCode in pair
         public override bool Equals(object? obj)
         {
-            return obj is Identity identity &&
+            return obj is IdCard identity &&
                    SerialNumber == identity.SerialNumber;
         }
 
