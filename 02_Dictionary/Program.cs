@@ -18,6 +18,8 @@ namespace _02_Dictionary
             countries.Add("CH", "China");
             countries.Add("PL", "Poland");
 
+            countries["UA"] = "Glory to Ukraine";
+            
             foreach (KeyValuePair<string, string> keyValue in countries)
             {
                 Console.WriteLine(keyValue.Key + " - " + keyValue.Value);
@@ -143,7 +145,7 @@ namespace _02_Dictionary
             return obj is IdCard identity &&
                    SerialNumber == identity.SerialNumber;
         }
-
+        
         public override int GetHashCode()
         {
             return HashCode.Combine(SerialNumber);
